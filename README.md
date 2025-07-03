@@ -102,6 +102,20 @@ Set an environment variable:
 
 ---
 
+## 🗃️ Proper Database Models (Data Diagram)
+
+All core entities (`User`, `Facilitator`, `Event`, `Booking`) are implemented using SQLAlchemy with clear relationships:
+
+- A `User` can have many `Bookings`
+- An `Event` is hosted by one `Facilitator`
+- Each `Booking` links a `User` to an `Event`
+
+The complete entity-relationship diagram (ERD) is documented in the file:
+
+📄 [`Data Diagram.pdf`](./Data%20Diagram.pdf)
+
+---
+
 ## 💳 Roadmap: Adding Payments for Booking Events
 
 To enable secure and trackable payments for session bookings, we can follow the roadmap below:
