@@ -143,11 +143,11 @@ The complete entity-relationship diagram (ERD) is documented in the file:
 
 ## 💳 Razorpay Payment Integration
 
-📄 [View Full Razorpay Integration Plan](./razorpay_plan_with_webhook.md)
+📄 [View Full Razorpay Integration Plan](./docs/razorpay_plan_with_webhook.md)
 
 🖼️ Below is the visual workflow diagram for Razorpay integration:
 
-![Razorpay Payment Roadmap](./Roadmap.png)
+![Razorpay Payment Roadmap](./docs/Roadmap.png)
 
 ---
 
