@@ -1,0 +1,360 @@
+{
+	"info": {
+		"_postman_id": "c4425c9d-e2b6-4fa0-bb5c-f1cf986ca441",
+		"name": "Ahoum Booking API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36723368"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MTUzMjUwMywianRpIjoiYTY2ZmYzYTgtZDAyYy00YWFkLWJmMzktNTg5MTgyNTdjZjY0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NTE1MzI1MDMsImNzcmYiOiJmOGFkMzk0NC03ZWI0LTQ3Y2MtYWM3OS1kY2M5ZDhmMDFjZTAiLCJleHAiOjE3NTE2MTg5MDN9.1BgMepDaSdHJ_R_GQ5OD3W_6ya7goy6XfQtiYTVLdjg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"testuser@example.com\",\r\n  \"password\": \"test123\",\r\n  \"name\": \"Test User\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ahoum-booking-system.onrender.com/register",
+					"protocol": "https",
+					"host": [
+						"ahoum-booking-system",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MTUzMjUwMywianRpIjoiYTY2ZmYzYTgtZDAyYy00YWFkLWJmMzktNTg5MTgyNTdjZjY0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NTE1MzI1MDMsImNzcmYiOiJmOGFkMzk0NC03ZWI0LTQ3Y2MtYWM3OS1kY2M5ZDhmMDFjZTAiLCJleHAiOjE3NTE2MTg5MDN9.1BgMepDaSdHJ_R_GQ5OD3W_6ya7goy6XfQtiYTVLdjg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"testuser@example.com\",\r\n  \"password\": \"test123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ahoum-booking-system.onrender.com/login",
+					"protocol": "https",
+					"host": [
+						"ahoum-booking-system",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "events",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MTU0OTU3NywianRpIjoiMjZhYzllZTEtYmNjZS00NzFlLWFhZDgtY2I4ZWY4YzZjZWVmIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NTE1NDk1NzcsImNzcmYiOiI5Y2E5NDczZi1hZTA2LTQwYjItYmQzYS0yNzQ0YmYxZjcyMWMiLCJleHAiOjE3NTE2MzU5Nzd9.SyaaPLzNBI0SLjW372gqb7QP-njoEMkIiu9t8enjYBQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ahoum-booking-system.onrender.com/events",
+					"protocol": "https",
+					"host": [
+						"ahoum-booking-system",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Events filter",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MTU0OTU3NywianRpIjoiMjZhYzllZTEtYmNjZS00NzFlLWFhZDgtY2I4ZWY4YzZjZWVmIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NTE1NDk1NzcsImNzcmYiOiI5Y2E5NDczZi1hZTA2LTQwYjItYmQzYS0yNzQ0YmYxZjcyMWMiLCJleHAiOjE3NTE2MzU5Nzd9.SyaaPLzNBI0SLjW372gqb7QP-njoEMkIiu9t8enjYBQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ahoum-booking-system.onrender.com/events?status=scheduled&type=Meditation",
+					"protocol": "https",
+					"host": [
+						"ahoum-booking-system",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"events"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "scheduled"
+						},
+						{
+							"key": "type",
+							"value": "Meditation"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Events nearby",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Event update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MTU0OTU3NywianRpIjoiMjZhYzllZTEtYmNjZS00NzFlLWFhZDgtY2I4ZWY4YzZjZWVmIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NTE1NDk1NzcsImNzcmYiOiI5Y2E5NDczZi1hZTA2LTQwYjItYmQzYS0yNzQ0YmYxZjcyMWMiLCJleHAiOjE3NTE2MzU5Nzd9.SyaaPLzNBI0SLjW372gqb7QP-njoEMkIiu9t8enjYBQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"date\": \"2025-07-20T09:30:00\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ahoum-booking-system.onrender.com/events/1",
+					"protocol": "https",
+					"host": [
+						"ahoum-booking-system",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"events",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Event Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MTU0OTU3NywianRpIjoiMjZhYzllZTEtYmNjZS00NzFlLWFhZDgtY2I4ZWY4YzZjZWVmIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NTE1NDk1NzcsImNzcmYiOiI5Y2E5NDczZi1hZTA2LTQwYjItYmQzYS0yNzQ0YmYxZjcyMWMiLCJleHAiOjE3NTE2MzU5Nzd9.SyaaPLzNBI0SLjW372gqb7QP-njoEMkIiu9t8enjYBQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://ahoum-booking-system.onrender.com/events/3\n",
+					"protocol": "https",
+					"host": [
+						"ahoum-booking-system",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"events",
+						"3\n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "book",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MTUzMjUwMywianRpIjoiYTY2ZmYzYTgtZDAyYy00YWFkLWJmMzktNTg5MTgyNTdjZjY0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NTE1MzI1MDMsImNzcmYiOiJmOGFkMzk0NC03ZWI0LTQ3Y2MtYWM3OS1kY2M5ZDhmMDFjZTAiLCJleHAiOjE3NTE2MTg5MDN9.1BgMepDaSdHJ_R_GQ5OD3W_6ya7goy6XfQtiYTVLdjg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n  \"event_id\": 1\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ahoum-booking-system.onrender.com/book",
+					"protocol": "https",
+					"host": [
+						"ahoum-booking-system",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "my-bookings",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MTUzMjUwMywianRpIjoiYTY2ZmYzYTgtZDAyYy00YWFkLWJmMzktNTg5MTgyNTdjZjY0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NTE1MzI1MDMsImNzcmYiOiJmOGFkMzk0NC03ZWI0LTQ3Y2MtYWM3OS1kY2M5ZDhmMDFjZTAiLCJleHAiOjE3NTE2MTg5MDN9.1BgMepDaSdHJ_R_GQ5OD3W_6ya7goy6XfQtiYTVLdjg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n\r\n"
+				},
+				"url": {
+					"raw": "https://ahoum-booking-system.onrender.com/my-bookings",
+					"protocol": "https",
+					"host": [
+						"ahoum-booking-system",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"my-bookings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cancel-booking/<id>",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MTUzMjUwMywianRpIjoiYTY2ZmYzYTgtZDAyYy00YWFkLWJmMzktNTg5MTgyNTdjZjY0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NTE1MzI1MDMsImNzcmYiOiJmOGFkMzk0NC03ZWI0LTQ3Y2MtYWM3OS1kY2M5ZDhmMDFjZTAiLCJleHAiOjE3NTE2MTg5MDN9.1BgMepDaSdHJ_R_GQ5OD3W_6ya7goy6XfQtiYTVLdjg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n\r\n"
+				},
+				"url": {
+					"raw": "https://ahoum-booking-system.onrender.com/cancel-booking/1",
+					"protocol": "https",
+					"host": [
+						"ahoum-booking-system",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"cancel-booking",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
