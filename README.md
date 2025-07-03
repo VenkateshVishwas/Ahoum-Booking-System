@@ -78,6 +78,26 @@ python seed.py  # to also add dummy facilitators & events
 
 ---
 
+## 🌍 Location Intelligence
+
+We use the **Google Maps Geocoding API** to convert human-readable locations into precise geographic coordinates (latitude & longitude).
+
+### 🧠 How it works:
+- When creating or updating an event with a location string (e.g. `"Goa"`), the backend:
+  - Calls Google Maps API
+  - Retrieves `latitude` and `longitude`
+  - Stores them in the database automatically
+
+This enables:
+- 📍 Nearby event search using `/events/nearby`
+- 🔍 Location filtering via coordinates (`lat`, `lng`, `radius`)
+
+> Example: Searching for events within 50 km of Delhi:
+
+
+---
+
+
 ## 🔔 CRM Notification (Simulated)
 
 When a booking is made, the system logs a payload like:
