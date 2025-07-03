@@ -9,7 +9,7 @@ from math import radians, cos, sin, asin, sqrt
 import os, requests
 from dotenv import load_dotenv
 
-
+load_dotenv()
 
 bp = Blueprint('main', __name__)
 
@@ -224,3 +224,20 @@ def get_nearby_events():
                 })
 
     return jsonify({"nearby_events": results})
+
+@bp.route('/geocode', methods=['POST'])
+@jwt_required()
+def geocode_location():
+    data = request.get_json()
+    location = data.get("location")
+
+    res = requests.get(
+        "https://maps.googleapis.com/maps/api/geocode/json",
+        params={"address": location, "key": GOOGLE_API_KEY}
+    )
+
+    geo = res.json()["results"][0]
+    lat = geo["geometry"]["location"]["lat"]
+    lng = geo["geometry"]["location"]["lng"]
+    return jsonify({"latitude": lat, "longitude": lng})
+

@@ -47,6 +47,7 @@ Create a `.env` file in root:
 SECRET_KEY=super-secret
 JWT_SECRET_KEY=jwt-secret
 DATABASE_URI=sqlite:///ahoum.db
+GOOGLE_MAPS_API_KEY = your_google_api
 ```
 
 ### 3. Create Tables
