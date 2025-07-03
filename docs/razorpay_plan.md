@@ -53,32 +53,6 @@ We have designed a complete plan for integrating Razorpay into the Ahoum Booking
 
 ---
 
-### 🔍 Razorpay API Overview
-
-| Method | Description         |
-|--------|---------------------|
-| GET    | Retrieve data       |
-| POST   | Create resource     |
-| PUT    | Replace resource    |
-| DELETE | Delete resource     |
-| PATCH  | Partial update      |
-
-**Common Data Types:**  
-- `String`, `Integer`, `Float`, `Boolean`, `Array`, `Object`
-
-**Status Codes:**  
-- 2xx Success, 4xx Client Error, 5xx Server Error
-
-**Rate Limits:**  
-- Handle 429 with exponential backoff.
-
-**Pagination Example:**  
-```http
-GET /payments?count=10&skip=10
-```
-
----
-
 ### 📊 Future Enhancements
 
 - Razorpay dashboard integration
