@@ -141,9 +141,13 @@ The complete entity-relationship diagram (ERD) is documented in the file:
 
 ---
 
-## 💳 Roadmap: Adding Payments for Booking Events
+## 💳 Razorpay Payment Integration
 
-To enable secure and trackable payments for session bookings, we can follow the roadmap below:
+📄 [View Full Razorpay Integration Plan](./razorpay_plan_with_webhook.md)
+
+🖼️ Below is the visual workflow diagram for Razorpay integration:
+
+![Razorpay Payment Roadmap](./Roadmap.png)
 
 ---
 
