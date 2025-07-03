@@ -23,6 +23,12 @@ This is a Flask-based backend API for a wellness booking system, built for the A
 
 ---
 
+## 🔗 Deployed link 
+
+- https://ahoum-booking-system.onrender.com
+
+---
+
 ## 🧑‍💻 Setup Instructions
 
 ### 1. Clone & Install
