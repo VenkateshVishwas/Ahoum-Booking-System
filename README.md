@@ -61,14 +61,18 @@ python seed.py  # to also add dummy facilitators & events
 
 ## 🧪 API Endpoints
 
-| Method | Endpoint             | Description                  |
-|--------|----------------------|------------------------------|
-| POST   | `/register`          | Register a new user          |
-| POST   | `/login`             | Get JWT token                |
-| GET    | `/events`            | List all events              |
-| POST   | `/book`              | Book an event (requires token) |
-| GET    | `/my-bookings`       | View past and upcoming bookings |
-| DELETE | `/cancel-booking/<id>` | Cancel a booking            |
+| Method | Endpoint                        | Description                                           |
+|--------|----------------------------------|-------------------------------------------------------|
+| POST   | `/register`                      | Register a new user                                  |
+| POST   | `/login`                         | Authenticate and get JWT token                       |
+| GET    | `/events`                        | List all events (`?status=` and `?type=` filters)    |
+| GET    | `/events/nearby`                 | Get events near a location (`lat`, `lng`, `radius`)  |
+| PUT    | `/events/<event_id>`             | Reschedule or update an event                        |
+| DELETE | `/events/<event_id>`             | Cancel (soft delete) an event                        |
+| POST   | `/book`                          | Book an event (requires token)                       |
+| GET    | `/my-bookings`                   | View past and upcoming bookings                      |
+| DELETE | `/cancel-booking/<booking_id>`   | Cancel a specific booking                            |
+
 
 > All protected routes require `Authorization: Bearer <token>` header.
 
