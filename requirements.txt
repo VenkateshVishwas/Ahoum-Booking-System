@@ -3,3 +3,4 @@ Flask-SQLAlchemy
 PyJWT
 python-dotenv
 flask_jwt_extended
+requests
