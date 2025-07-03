@@ -118,7 +118,7 @@ Located in: `app/crm.py`
 
 ## 📬 Postman Collection
 
-Import the file [`Ahoum_Booking_API.postman_collection.json`](./Ahoum_BookingAPI.postman_collection.json) in Postman.
+Import the file [`Ahoum_Booking_API.postman_collection.json`](./Ahoum_Booking API.postman_collection.json) in Postman.
 
 Set an environment variable:
 ```json
