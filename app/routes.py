@@ -206,7 +206,7 @@ def get_nearby_events():
     except (TypeError, ValueError):
         return jsonify({"msg": "lat, lng and optional radius (km) are required as query params."}), 400
 
-    events = Event.query.filter_by(is_deleted=False, status="scheduled").all()
+    events = Event.query.filter_by(is_deleted=False).all()
     results = []
 
     for e in events:
