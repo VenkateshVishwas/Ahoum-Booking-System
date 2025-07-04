@@ -47,8 +47,50 @@ We have designed a complete plan for integrating Razorpay into the Ahoum Booking
        amount_paid=data['amount']
    )
    ```
+### 🔐 Payment Verification via Razorpay API (Backend)
 
-6. **Optional Webhook (Recommended)**  
+Currently, the frontend sends the payment status to the backend. For a more secure flow, we should verify the payment using Razorpay's SDK on the backend.
+
+#### ✅ Recommended Flow:
+
+1. After successful payment on the frontend, send the following to your backend:
+   - `razorpay_order_id`
+   - `razorpay_payment_id`
+   - `razorpay_signature`
+
+2. On the backend, use Razorpay's utility method to verify the signature:
+
+   ```python
+   razorpay_client.utility.verify_payment_signature({
+       'razorpay_order_id': order_id,
+       'razorpay_payment_id': payment_id,
+       'razorpay_signature': signature
+   })
+3. You can pass metadata like `user_id` or `event_title` when creating a Razorpay order using the `notes` parameter.
+
+This metadata is:
+
+- Visible on the Razorpay Dashboard
+- Automatically included in webhook payloads
+
+#### ✅ Example:
+
+```python
+notes = {
+  "user_id": user_id,
+  "event_title": event.title
+}
+
+order = razorpay_client.order.create({
+    "amount": amount * 100,
+    "currency": "INR",
+    "payment_capture": 1,
+    "notes": notes
+})
+```
+
+
+**Optional Webhook (Recommended)**  
    Use `/payment-webhook` to handle automatic updates from Razorpay like:
    - `payment.captured` (successful payment)
    - `payment.failed`
